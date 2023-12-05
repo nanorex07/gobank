@@ -19,7 +19,10 @@ migratedown:
 sqlc:
 	sqlc generate
 
+server:
+	go run main.go
+
 test:
 	go test -v -cover ./...
 
-.PHONY: postgres createdb migrateup migratedown listtables sqlc
+.PHONY: postgres createdb migrateup migratedown listtables sqlc server
