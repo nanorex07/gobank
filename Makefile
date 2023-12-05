@@ -14,7 +14,7 @@ migrateup:
 	migrate -path db/migration -database "postgres://root:secret@localhost:5432/gobank?sslmode=disable" -verbose up
 
 migratedown:
-	migrate -path db/migration -database "postgres://root:secret@localhost:5432/gobank?sslmode=disable" -verbose dow
+	migrate -path db/migration -database "postgres://root:secret@localhost:5432/gobank?sslmode=disable" -verbose down
 
 sqlc:
 	sqlc generate
